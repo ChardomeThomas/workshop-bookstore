@@ -19,6 +19,13 @@ RUN arch=$(echo ${TARGETPLATFORM} | sed 's/.*\///') && \
     tar --extract --verbose --file=openjdk-${JDKVERSION}_linux-${jdkArch}_bin.tar.gz --directory=/usr/local && \
     rm ./openjdk-${JDKVERSION}_linux-${jdkArch}_bin.tar.gz
 
+#Add and install Git
+RUN apt-get update && apt-get install -y git \
+    && rm -rf /var/lib/apt/lists/*
+
+# Define the repo
+WORKDIR /app   
+ 
 # Make java binaries globally available
 ENV JAVA_HOME="/usr/local/jdk-${JDKVERSION}"
 ENV PATH="$JAVA_HOME/bin:$PATH"
