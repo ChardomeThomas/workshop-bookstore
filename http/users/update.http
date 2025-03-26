@@ -1,0 +1,10 @@
+PUT http://localhost:8080/api/users/4
+content-type: application/json
+
+{
+	"id": 1,
+    "name": "bob2",
+	"surname": "dylan2",
+	"isAdmin": false,
+	"mail": "bobdylan@test.com"
+}
