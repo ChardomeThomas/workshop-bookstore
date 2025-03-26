@@ -1,4 +1,4 @@
-package testing.app.controllers;
+/* package testing.app.controllers;
 
 import java.lang.classfile.ClassFile.Option;
 import java.util.List;
@@ -74,3 +74,4 @@ public class ArticleController {
         this.articleSpringDataRepository.save(article);
     }
 }
+ */

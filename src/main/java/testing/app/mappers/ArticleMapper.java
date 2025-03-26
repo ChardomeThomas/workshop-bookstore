@@ -1,4 +1,4 @@
-package testing.app.mappers;
+/* package testing.app.mappers;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -25,4 +25,4 @@ public class ArticleMapper implements RowMapper<Article> {
         return new Article(id, title, slug, description, status, createdAt);
     }
     
-}
+} */

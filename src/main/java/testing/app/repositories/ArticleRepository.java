@@ -1,4 +1,4 @@
-package testing.app.repositories;
+/* package testing.app.repositories;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -46,3 +46,4 @@ public class ArticleRepository {
         }
     }
 }
+ */

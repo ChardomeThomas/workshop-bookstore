@@ -1,4 +1,4 @@
-package testing.app.repositories;
+/* package testing.app.repositories;
 
 import java.sql.Timestamp;
 import java.time.LocalDateTime;
@@ -70,3 +70,4 @@ public class ArticleJdbcTemplateRepository {
         this.jdbcTemplate.update(sql, id);
     }
 }
+ */
