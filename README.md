@@ -36,3 +36,6 @@ Fred: catégories
 
 
 model > repo > service > controller
+
+
+https://planningpokeronline.com/BQlcnJFccOnWRmSHoTt6/
