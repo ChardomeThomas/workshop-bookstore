@@ -2,7 +2,7 @@ package testing.app.mappers;
 
 import org.springframework.stereotype.Component;
 
-import testing.app.models.Book;
+import testing.app.entities.Book;
 
 @Component
 public class BookMapper {

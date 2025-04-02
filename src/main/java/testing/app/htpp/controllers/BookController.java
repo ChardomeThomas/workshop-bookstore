@@ -1,4 +1,4 @@
-package testing.app.controllers;
+package testing.app.htpp.controllers;
 
 import java.math.BigInteger;
 
@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import lombok.AllArgsConstructor;
-import testing.app.models.Book;
+import testing.app.entities.Book;
 
 //GET books -> INDEX (findAll)
 //GET books/:id -> SHOW (findById)

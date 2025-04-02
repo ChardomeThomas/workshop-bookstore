@@ -4,7 +4,7 @@ import java.math.BigInteger;
 
 import org.springframework.data.repository.ListCrudRepository;
 
-import testing.app.models.Book;
+import testing.app.entities.Book;
 
 public interface BookRepository extends ListCrudRepository<Book, BigInteger>{
 

@@ -1,4 +1,4 @@
-package testing.app.models;
+package testing.app.entities;
 
 import java.security.Timestamp;
 
