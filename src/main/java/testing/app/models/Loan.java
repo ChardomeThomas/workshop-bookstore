@@ -1,6 +1,7 @@
 package testing.app.models;
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -84,6 +85,8 @@ public class Loan {
         return this.id != null;
     }
 =======
+=======
+>>>>>>> Stashed changes
 import java.util.Date;
 
 import jakarta.persistence.Entity;
@@ -103,6 +106,9 @@ public class Loan {
 
     private Date loanDate;
     private Date expectedBackDate;
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
 }
