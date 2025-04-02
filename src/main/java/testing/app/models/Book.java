@@ -26,8 +26,10 @@ public class Book{
     private Integer id;
     private String title;
     private String author;
+    private String description;
     private String publication_year;
-    private Integer category_id;
+    private Integer category;
+    private Integer status;
     private Timestamp created_date;
 
 }
