@@ -1,77 +1,50 @@
-/* package testing.app.controllers;
+package testing.app.controllers;
 
-import java.lang.classfile.ClassFile.Option;
-import java.util.List;
-import java.util.Optional;
+import java.math.BigInteger;
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.server.ResponseStatusException;
-
-import testing.app.enums.ArticleStatus;
-import testing.app.exceptions.repositories.ModelNotFoundException;
-import testing.app.models.Article;
-import testing.app.repositories.ArticleJdbcTemplateRepository;
-import testing.app.repositories.ArticleRepository;
-import testing.app.repositories.ArticleSpringDataRepository;
-
-import org.springframework.http.HttpStatus;
-import org.springframework.http.HttpStatusCode;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.ResponseStatus;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
+import lombok.AllArgsConstructor;
+import testing.app.models.Book;
 
+//GET books -> INDEX (findAll)
+//GET books/:id -> SHOW (findById)
+//POST books -> STORE (store / save)
+//PUT books/:id -> UPDATE (update / save)
+//DELETE books/:id -> DESTROY (destroy / delete / deleteById)
 
-
-// GET articles -> INDEX (findAll)
-// GET articles/:id -> SHOW (findById)
-// POST articles -> STORE (store / save)
-// PUT articles/:id -> UPDATE (update / save)
-// DELETE articles/;id -> DESTROY (destroy / delete / deleteById)
- 
 @RestController
-@RequestMapping("api/articles")
-public class ArticleController {
-    private ArticleJdbcTemplateRepository articleRepository;
-    private ArticleSpringDataRepository articleSpringDataRepository;
+@RequestMapping("api/books")
+public class BookController {
+    private BookService bookService;
 
-    public ArticleController(
-        ArticleJdbcTemplateRepository articleRepository,
-        ArticleSpringDataRepository articleSpringDataRepository
-    ) {
-        this.articleRepository = articleRepository;
-        this.articleSpringDataRepository = articleSpringDataRepository;
-    }
-    
-    @GetMapping("")
-    public List<Article> findAll() {
-        return this.articleSpringDataRepository.findByStatus(ArticleStatus.REVIEW);
-    }
-    
     @PostMapping("")
-    @ResponseStatus(HttpStatus.CREATED)
-    public void store(@RequestBody Article article) {
-        this.articleSpringDataRepository.save(article);
+    public BookResource store(@RequestBody @Valid BookRequest request) {
+        retrun this.bookService.store(request);
     }
 
-    @GetMapping("/{id}")
-    public Optional<Article> findById(@PathVariable Integer id) {
-        return this.articleSpringDataRepository.findById(id);
+    @GetMapping("{id}")
+    public Book show(@PathVariable BigInteger id) {
+        return this.resitory.findById(id).orElseThrow();
     }
 
-    @DeleteMapping("/{id}")
-    public void deleteById(@PathVariable Integer id) {
-        this.articleSpringDataRepository.deleteById(id);
+    @PutMapping("{id}")
+    public GameResource update(@PathVariable BigInteger id, @RequestBody @Valid BookRequest request) {
+        return this.bookService.update(id, request);
     }
 
-    @PutMapping("/{id}")
-    public void update(@RequestBody Article article) {
-        this.articleSpringDataRepository.save(article);
+    @DeleteMapping("{id}")
+    public Book destroy(@PathVariable BigInteger id) {
+        Book book = this.repository.findById(id).orElseThrow();
+
+        this.repository.delete(book);
+
+        return book;
     }
+
 }
- */

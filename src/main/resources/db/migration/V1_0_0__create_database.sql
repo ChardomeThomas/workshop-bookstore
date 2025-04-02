@@ -11,6 +11,8 @@ CREATE TABLE IF NOT EXISTS books (
     author VARCHAR(255) NOT NULL,
     publication_year INT,
     category_id INT,
+    user_id INT,
+    FOREIGN KEY (user_id) REFERENCES users(ID) ON DELETE SET NULL,
     FOREIGN KEY (category_id) REFERENCES category(ID) ON DELETE SET NULL
 );
 
