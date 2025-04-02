@@ -1,5 +1,6 @@
 package testing.app.models;
 
+<<<<<<< Updated upstream
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -82,5 +83,26 @@ public class Loan {
     public Boolean isSaved() {
         return this.id != null;
     }
+=======
+import java.util.Date;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+
+@Entity
+@AllArgsConstructor
+@Getter
+public class Loan {
+
+    @Id
+    private Integer idBook;
+    
+    private Integer idUser;
+
+    private Date loanDate;
+    private Date expectedBackDate;
+>>>>>>> Stashed changes
 
 }
