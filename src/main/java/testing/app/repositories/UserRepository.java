@@ -1,6 +1,8 @@
 package testing.app.repositories;
+import org.springframework.data.repository.ListCrudRepository;
 
+import testing.app.models.User;
 
-public class UserRepository {
-	
+public interface UserRepository extends ListCrudRepository<User, Integer> {
+
 }
